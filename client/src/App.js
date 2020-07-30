@@ -9,20 +9,27 @@ import Pet from './components/Pet';
 import About from './components/About';
 
 
+
 function App() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-warning">
         <img className="m-2" src="/img/dog-paw.png" width="18px" alt="paw"/>
         <Link className="navbar-brand text-success m-2 lead" to="/">petshelter.com</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <div className="navbar-nav">
-            <Link className="nav-item nav-link text-info lead" to="/">About Us</Link>
-            <Link className="nav-item nav-link text-info lead" to="/pets">Our Buddies</Link>
-            <Link className="nav-item nav-link text-info lead" to="/pets/new">Post a Pet</Link>
+            <li class="nav-item">
+              <a class="nav-link text-info lead active" href="/">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-info lead" href="/pets">Our Buddies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-info lead" href="/pets/new">Post a Pet</a>
+            </li>
 
           </div>
         </div>
@@ -34,8 +41,8 @@ function App() {
         <Pet path="/pets/:_id"/>
         <About path="/"/>
       </Router>
-      
     </div>
+
   );
 }
 

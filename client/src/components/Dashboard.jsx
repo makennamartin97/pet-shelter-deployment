@@ -18,9 +18,8 @@ const Dashboard = props => {
     }, []);
     return(
     <div className="container-fluid text-center">
-        <img src="img/doggos.png" alt="paw" width="465px"/>
-        <img src="img/doggos.png" alt="paw" width="465px"/>
-        <img src="img/doggos.png" alt="paw" width="465px"/>
+        <img src="img/doggos.png" alt="paw" className="img-fluid"/>
+
         <div className="row">
             
                 {pets.map( (pet, i) => 
@@ -37,8 +36,8 @@ const Dashboard = props => {
 
                         </div>
                         <div className="text-center">
-                            <Link className="btn btn-success float-left m-4" to={`/pets/${pet._id}/edit`}>Edit</Link>
-                            <Link className="btn btn-success float-right m-4" to={`/pets/${pet._id}`}>Get to Know {pet.petName} </Link>
+                            <Link className="btn btn-success float-left m-3" to={`/pets/${pet._id}/edit`}>Edit</Link>
+                            <Link className="btn btn-success float-right m-3" to={`/pets/${pet._id}`}>Get to Know {pet.petName} </Link>
                         </div>
                     
                         

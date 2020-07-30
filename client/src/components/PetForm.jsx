@@ -18,7 +18,7 @@ const PetForm = props => {
                 if(res.data.errors){
                     setErrors(res.data.errors)
                 }else{
-                    navigate("/");
+                    navigate("/pets");
                 }
                 
             }).catch(err => console.log(err));
